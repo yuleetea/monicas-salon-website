@@ -1,38 +1,441 @@
-.App {
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cardo, Inter, sans-serif;
+  background-color: #f4efe9;
+}
+
+a {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+/* NavBar */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 70px;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 30%;
+  letter-spacing: 5px;
+  font-size: 24px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.img-logo {
+  width: 450px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  top: -128px;
+  left: -300px;
+  cursor: pointer;
+}
+
+.link {
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.link a {
+  color: #746662;
+}
+
+/* Header Image */
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 620px;
+  padding: 300px;
+}
+
+.header-image {
+  width: auto;
+  height: 400px;
+}
+
+.circular--portrait {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+  margin-top: -80px;
+}
+
+.blurb-container {
+  margin-left: 20px;
+  border-radius: 6%;
+  width: 38%;
+  height: 330px;
+  background-color: #c4b6b1;
+}
+
+.blurb {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: "Cardo", sans-serif;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-top: 70px;
+  margin: 10px;
+  margin-left: 50px;
+  color: #1a1a1a;
+}
+
+a.button1 {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid black;
+  margin: 10 0.3em 0.3em 10;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Cardo", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #7894a1;
   text-align: center;
+  transition: all 0.2s;
+  width: 125px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a.button1:hover {
+  background-color: #f0ca9c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media all and (max-width: 30em) {
+  a.button1 {
+    display: block;
+    margin: 0.2em auto;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a.button2 {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid black;
+  margin: 10 0.3em 0.3em 10;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Cardo", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #7894a1;
+  text-align: center;
+  transition: all 0.2s;
+  width: 125px;
+}
+
+a.button2:hover {
+  background-color: #f0ca9c;
+}
+
+@media all and (max-width: 30em) {
+  a.button2 {
+    display: block;
+    margin: 0.2em auto;
+  }
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: auto;
+  width: 50%;
+  padding: 25px;
+}
+
+/* Photo Gallery Section */
+
+.images-container {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin-top: 10em;
+  font-size: 35px;
+  font-family: "Cardo", sans-serif;
+  letter-spacing: 1px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.container-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.container-image:hover {
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+.container-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Form */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: #bbb5af;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: #bbb5af;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::placeholder,
+textarea::focus:placeholder {
+  color: #bbb5af;
+}
+
+input::-ms-placeholder,
+textarea::-ms-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder,
+textarea:focus::-ms-placeholder {
+  color: #bbb5af;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder,
+textarea:hover:focus::-webkit-input-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder,
+textarea:hover::-moz-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder,
+textarea:hover:focus::-moz-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::placeholder,
+textarea:hover:focus::placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder,
+textarea:hover::focus:-ms-placeholder {
+  color: #cbc6c1;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #f4efe9;
+  color: #b3aca7;
+}
+
+header {
+  position: relative;
+  margin: 100px 0 25px 0;
+  font-size: 2.3em;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: "Lato", sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+
+  background: transparent;
+  outline: none;
+  color: #726659;
+
+  border: solid 1px #b3aca7;
+  border-bottom: none;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+
+  background: transparent;
+  outline: none;
+
+  color: #726659;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875em;
+
+  border: solid 1px #b3aca7;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+#submit {
+  width: 470px;
+
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+
+  font-family: "Lato", sans-serif;
+  font-size: 0.875em;
+  color: #b3aca7;
+
+  outline: none;
+  cursor: pointer;
+
+  border: solid 1px #b3aca7;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #e2dedb;
+}
+
+.contact-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* About Section */
+.about-section {
+  background: url(./images/MonicaCafe.jpg) no-repeat left;
+  background-size: 55%;
+  overflow: hidden;
+  padding: 40px 0;
+  position: absolute;
+  right: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inner-container {
+  width: 45%;
+  float: right;
+  background-color: #fdfdfd;
+  padding: 150px;
+}
+
+.inner-container h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.text {
+  font-size: 13px;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 13px;
 }
